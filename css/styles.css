@@ -1,0 +1,93 @@
+.knewave-regular {
+  font-family: "Knewave", system-ui;
+  font-weight: 400;
+  font-style: normal;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  margin: 0;
+  background-color: #595656;
+  font-family: "Knewave", system-ui;
+}
+
+.container {
+  width: 90%;
+  position: relative;
+  max-width: 1000px;
+}
+
+.line {
+  font-size: 1.2rem;
+  margin: 20px 0;
+}
+
+.top-left {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.top-right {
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
+.spread-left, .spread-right {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  margin: 60px 0;
+}
+
+.spread-left {
+  position: absolute;
+  left: 10%;
+  top: 20%;
+}
+
+.spread-right {
+  position: absolute;
+  right: 10%;
+  top: 20%;
+}
+
+.block {
+  margin-top: 10px;
+  padding: 5px;
+  text-align: center;
+}
+
+.love {
+  color: magenta;
+}
+
+.animosity {
+  color: maroon;
+}
+
+.bottom {
+  position: absolute;
+  bottom: -300px;
+  left: 0;
+  right: 0;
+  text-align: center;
+  font-size: 1.2rem;
+}
+
+.highlight-blue {
+  color: darkblue;
+}
+
+.highlight-pink {
+  color: magenta;
+}
+
+.highlight-red {
+  color: maroon;
+}
