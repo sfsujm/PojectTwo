@@ -11,7 +11,7 @@ body {
   min-height: 100vh;
   margin: 0;
   background-color: lightblue;
-  font-family: "Knewave", system-ui;
+  font-family: 'Knewave'
 }
 
 .container {
@@ -20,73 +20,86 @@ body {
   margin: auto;
 }
 
+.yo-container {
+  margin-bottom: 10px;
+}
+
+.yo {
+  font-size: 10em; 
+  color: #e91e63; 
+  opacity: 0; 
+  transform: scale(0.5); 
+  animation: yoGrowShrink 3s forwards ease-in-out; 
+}
+
+@keyframes yoGrowShrink {
+  0% {
+      opacity: 0;
+      transform: scale(0.5); 
+  }
+  25% {
+      opacity: 1;
+      transform: scale(2); 
+  }
+  50% {
+      opacity: 1;
+      transform: scale(0.8); 
+  }
+  100% {
+      opacity: 1;
+      transform: scale(1); 
+  }
+}
+
 .line {
-  font-size: 2em;
+  font-size: 3em; 
   opacity: 0; 
   position: relative;
-  color: white;
+  color: black;
+  margin: 10px 0; 
+  animation: fadeInSlide 3s forwards ease-out; 
+}
+
+.line:nth-child(2) {
+  animation-delay: 1s; 
+}
+
+.line:nth-child(3) {
+  animation-delay: 2s; 
+}
+
+@keyframes fadeInSlide {
+  0% {
+      transform: translateY(20px); 
+      opacity: 0; 
+  }
+  100% {
+      transform: translateY(0); 
+      opacity: 1; 
+  }
 }
 
 .highlight-blue {
-  color: #3498db;
+  color: darkblue
 }
 
-.top-left {
-  animation: slideInLeft 2s forwards ease-out;
-}
-
-.top-right {
-  animation: slideInRight 2s forwards ease-out;
-  animation-delay: 0.5s; 
-}
-
-@keyframes slideInLeft {
-  0% {
-    transform: translateX(-100%);
-    opacity: 0;
-  }
-  100% {
-    transform: translateX(0);
-    opacity: 1;
-  }
-}
-
-@keyframes slideInRight {
-  0% {
-    transform: translateX(100%);
-    opacity: 0;
-  }
-  100% {
-    transform: translateX(0);
-    opacity: 1;
-  }
-}
-
-.love {
-  color: magenta;
-}
-
-.animosity {
-  color: maroon;
-}
-
-.bottom {
-  position: absolute;
-  bottom: -300px;
-  left: 0;
-  right: 0;
-  text-align: center;
-  font-size: 1.2rem;
-}
-
-.highlight-blue {
+a, a:visited {
+  text-decoration: none;
   color: darkblue;
+  font-weight: bold; 
+  transition: color 0.3s; 
 }
 
-.highlight-pink {
-  color: magenta;
+a:hover {
+  color: #e91e63; 
 }
 
-.highlight-red {
-  color: maroon;
+@media (max-width: 600px) {
+  .yo {
+      font-size: 5em; 
+  }
+
+  .line {
+      font-size: 1.5em; 
+  }
 }
