@@ -15,26 +15,41 @@ body {
     font-family: "Knewave", system-ui;
 }
 
-.bottom {
+/* multiple animation property values from developer.mozilla.org with modifications */
+
+.line {
     font-size: 3em; 
     text-align: center;
     margin-top: 20px;
 }
 
 .dynamic-text {
-    display: inline-block; 
-    opacity: 0; 
-    transform: translateY(20px); 
-    animation: fadeInUp 1s forwards; 
+    display: inline-block;
 }
 
-@keyframes fadeInUp {
+.dynamic-text span {
+    display: inline-block;
+    transform: translateY(20px); 
+    animation: waveIn 1.5s forwards; 
+}
+
+@keyframes waveIn {
     0% {
-        opacity: 0; 
-        transform: translateY(20px); 
+        opacity: 0;
+        transform: translateY(40px); 
+    }
+    30% {
+        opacity: 1; 
+        transform: translateY(-20px); 
+    }
+    50% {
+        transform: translateY(10px); 
+    }
+    70% {
+        transform: translateY(-5px); 
     }
     100% {
-        opacity: 1; 
+        opacity: 1;
         transform: translateY(0); 
     }
 }
@@ -70,7 +85,7 @@ a, a:visited {
 }
 
 a:hover {
-    color: #e91e63; 
+    color: #ff0055; 
     transform: scale(1.1); 
     letter-spacing: -5px; 
 }
